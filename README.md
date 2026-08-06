@@ -1,3 +1,23 @@
+> ## Archived, and it does not run
+>
+> This repo is archived and read only. Do not clone it expecting working code.
+>
+> `NumberRecognizer.py` calls `tf.keras.models.load_model('handwritten.keras')` on line 37, but
+> `handwritten.keras` was never committed here, so the script raises on a clean clone. The training
+> block that would produce that file is commented out, lines 14 to 30. The inference loop also reads
+> from a hardcoded `~/Downloads/nums4` folder that does not exist for anyone else.
+>
+> The instructions below are also wrong. There is no `train.py` and no `main.py` in this repo. The
+> only script is `NumberRecognizer.py`.
+>
+> Everything under this line is the original README, kept as written.
+>
+> For work that actually runs, see [ESG Investment Screener](https://github.com/utosrad/ESG-Investment-Screener)
+> (live at https://esg-investment-screener.streamlit.app/) or the rest of
+> [github.com/utosrad](https://github.com/utosrad).
+
+---
+
 # Number-Recognizer
 A minimal handwritten digit recognizer trained on MNIST with TensorFlow/Keras. The repo shows the full pipeline from training to evaluating to predicting on your own PNGs.
 
