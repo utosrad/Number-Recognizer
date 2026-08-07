@@ -61,6 +61,10 @@ Three out of three, versus one out of three at a third of the confidence.
 python -m numrec predict ~/my-drawings
 ```
 
+Training is seeded. Running `train` on a fresh clone rewrote `models/mnist_cnn.pt` byte for byte
+identically to the committed file, and `evaluate` reproduced the table above to the last decimal.
+Verified on Python 3.14 in a clean virtualenv.
+
 ## How the preprocessing works
 
 `naive` is the path most MNIST demos use, and the one the earlier version of this repo used.

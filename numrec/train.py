@@ -70,7 +70,7 @@ def train(
             loss = loss_fn(model(x), y)
             loss.backward()
             optimiser.step()
-            running += float(loss)
+            running += float(loss.detach())
             if step % 100 == 0:
                 print(f"epoch {epoch} step {step}/{len(train_loader)} loss {running / step:.4f}")
         acc = accuracy(model, test_loader)
