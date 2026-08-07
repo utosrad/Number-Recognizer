@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numrec"
+version = "1.0.0"
+description = "Digit classifier that measures and closes the MNIST preprocessing gap"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Umar Darsot" }]
+dependencies = [
+    "torch==2.13.0",
+    "torchvision==0.28.0",
+    "numpy==2.5.1",
+    "pillow==12.3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[project.scripts]
+numrec = "numrec.cli:main"
+
+[tool.setuptools]
+packages = ["numrec"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
